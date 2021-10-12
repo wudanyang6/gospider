@@ -34,7 +34,7 @@ func main() {
 	commands.Flags().StringP("blacklist", "", "", "Blacklist URL Regex")
 	commands.Flags().StringP("whitelist", "", "", "Whitelist URL Regex")
 	commands.Flags().StringP("whitelist-domain", "", "", "Whitelist Domain")
-    commands.Flags().StringP("filter-length", "L", "", "Turn on length filter")
+	commands.Flags().StringP("filter-length", "L", "", "Turn on length filter")
 
 	commands.Flags().IntP("threads", "t", 1, "Number of threads (Run sites in parallel)")
 	commands.Flags().IntP("concurrent", "c", 5, "The number of the maximum allowed concurrent requests of the matching domains")
@@ -50,7 +50,7 @@ func main() {
 	commands.Flags().BoolP("other-source", "a", false, "Find URLs from 3rd party (Archive.org, CommonCrawl.org, VirusTotal.com, AlienVault.com)")
 	commands.Flags().BoolP("include-subs", "w", false, "Include subdomains crawled from 3rd party. Default is main domain")
 	commands.Flags().BoolP("include-other-source", "r", false, "Also include other-source's urls (still crawl and request)")
-    commands.Flags().BoolP("subs", "", false, "Include subdomains")
+	commands.Flags().BoolP("subs", "", false, "Include subdomains")
 
 	commands.Flags().BoolP("debug", "", false, "Turn on debug mode")
 	commands.Flags().BoolP("json", "", false, "Enable JSON output")
@@ -58,9 +58,8 @@ func main() {
 	commands.Flags().BoolP("quiet", "q", false, "Suppress all the output and only show URL")
 	commands.Flags().BoolP("no-redirect", "", false, "Disable redirect")
 	commands.Flags().BoolP("version", "", false, "Check version")
-    commands.Flags().BoolP("length", "l", false, "Turn on length")
-    commands.Flags().BoolP("raw", "R", false, "Enable raw output")
-
+	commands.Flags().BoolP("length", "l", false, "Turn on length")
+	commands.Flags().BoolP("raw", "R", false, "Enable raw output")
 
 	commands.Flags().SortFlags = false
 	if err := commands.Execute(); err != nil {
